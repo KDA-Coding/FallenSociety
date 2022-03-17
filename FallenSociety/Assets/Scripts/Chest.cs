@@ -14,7 +14,9 @@ public class Chest : Collectable
         {
             isCollected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
-            Debug.Log("Granted " + coinAmount + " coins!");
+
+            //Statement to show currency text over Chests.
+            GameManager.instance.ShowText("+" + coinAmount + " coins", 22, Color.yellow, transform.position, Vector3.up * 40, 2.5f);
         }
     }
 

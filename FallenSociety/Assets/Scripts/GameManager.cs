@@ -35,10 +35,9 @@ public class GameManager : MonoBehaviour
     public int experience;
 
     //Floating Text to manage
-    public void ShowText(string msg, int fontSize, Color color, Vector3 position,
-        Vector3 motion, float duration) 
+    public void ShowText(string message, int fontSize, Color color, Vector3 position, Vector3 motion, float duration) 
     {
-        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
+        floatingTextManager.Show(message, fontSize, color, position, motion, duration);
     }
 
 

@@ -7,7 +7,7 @@ public class FloatingTextManager : MonoBehaviour
     public GameObject textContainer;
     public GameObject textPrefab;
 
-    private List<FloatingText> floatingTexts = new List<FloatingText>();
+    protected List<FloatingText> floatingTexts = new List<FloatingText>();
 
     private void Update() 
     {
@@ -17,8 +17,7 @@ public class FloatingTextManager : MonoBehaviour
         }
     }
 
-    public void Show(string message, int fontSize, Color color, Vector3 position,
-        Vector3 motion, float duration) 
+    public void Show(string message, int fontSize, Color color, Vector3 position, Vector3 motion, float duration) 
     {
         FloatingText floatingText = GetFloatingText();
 
@@ -43,7 +42,7 @@ public class FloatingTextManager : MonoBehaviour
         if(txt == null) 
         {
             txt = new FloatingText();
-            txt.go = Instantiate(textPrefab);
+            txt.go = Instantiate(textPrefab.gameObject);
             txt.go.transform.SetParent(textContainer.transform);
             txt.text = txt.go.GetComponent<Text>();
 
