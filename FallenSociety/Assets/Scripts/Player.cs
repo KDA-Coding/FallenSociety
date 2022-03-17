@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private Vector3 moveDelta;
     private RaycastHit2D hit;
 
+    private Vector2 colScale = new Vector2(0.7f, 0.7f);
+
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -34,7 +36,7 @@ public class Player : MonoBehaviour
 
         // Check if we can move in this direction by casting a box collider in that direction first.
         // If box collider returns null, we can move.
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y),
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size * colScale, 0, new Vector2(0, moveDelta.y),
             Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0),
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size * colScale, 0, new Vector2(moveDelta.x, 0),
             Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
