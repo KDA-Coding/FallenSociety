@@ -22,12 +22,18 @@ public class Collidable : MonoBehaviour
             if(hits[i] == null) 
                 continue;
 
-            Debug.Log(hits[i].name);
+            OnCollide(hits[i]);
 
             //Clean up collisions array at end of detection for that index
             hits[i] = null;
             
         }
+    }
+
+    protected virtual void OnCollide(Collider2D coll) 
+    {
+        Debug.Log(coll.name);
+    
     }
 
 }
