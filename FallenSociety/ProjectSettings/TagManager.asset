@@ -44,15 +44,15 @@ TagManager:
   - name: Floor
     uniqueID: 840615143
     locked: 0
-  - name: Actor
-    uniqueID: 2861507215
-    locked: 0
-  - name: Wall
-    uniqueID: 452544269
-    locked: 0
   - name: Interactable
     uniqueID: 371464129
     locked: 0
   - name: Passable Terrain
     uniqueID: 2502187507
+    locked: 0
+  - name: Actor
+    uniqueID: 2861507215
+    locked: 0
+  - name: Wall
+    uniqueID: 452544269
     locked: 0
