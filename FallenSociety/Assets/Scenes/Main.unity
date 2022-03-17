@@ -13336,7 +13336,7 @@ MonoBehaviour:
   weaponSprites: []
   weaponPrices: 
   xpTable: 
-  player: {fileID: 0}
+  player: {fileID: 1621611737}
   coins: 0
   experience: 0
 --- !u!1 &1157133259

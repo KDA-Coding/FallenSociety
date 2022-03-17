@@ -52,11 +52,11 @@ public class GameManager : MonoBehaviour
         s += "0";
 
         PlayerPrefs.SetString("SaveState", s);
+        Debug.Log("Save State");
     }
 
     public void LoadState(Scene s, LoadSceneMode mode) 
     {
-
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         //Change Recorded Data from PlayerPrefs parse
         /*Skin*/
         /*Coins*/ coins = int.Parse(data[1]);
-        /*Experience*/ experience = int.Parse(data[1]);
+        /*Experience*/ experience = int.Parse(data[2]);
         /*Weapon Level*/
 
         Debug.Log("Load State");
