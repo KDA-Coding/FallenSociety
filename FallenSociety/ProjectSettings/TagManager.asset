@@ -53,6 +53,12 @@ TagManager:
   - name: Actor
     uniqueID: 2861507215
     locked: 0
+  - name: Weapon
+    uniqueID: 1830488587
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2590345911
+    locked: 0
   - name: Wall
     uniqueID: 452544269
     locked: 0
