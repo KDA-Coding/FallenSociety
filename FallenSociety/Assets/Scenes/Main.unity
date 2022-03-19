@@ -13672,7 +13672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196523013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.538, y: -0.247, z: 0}
+  m_LocalPosition: {x: -0.648, y: 0.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1850859048}
@@ -13691,12 +13691,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5434cbe2616d6e64d9bd20175698616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoints: 10
+  hitpoint: 3
+  maxHitPoints: 3
   pushRecoverySpeed: 0.2
   xpValue: 1
-  triggerDistance: 1
-  chaseDistance: 5
+  triggerDistance: 0.4
+  chaseDistance: 1
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &1246794313
 GameObject:
   m_ObjectHideFlags: 0
@@ -14113,7 +14127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621611734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.102, y: 0.0005, z: 0}
+  m_LocalPosition: {x: 0.202, y: -0.094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1341199139}
