@@ -13851,6 +13851,7 @@ GameObject:
   - component: {fileID: 1341199140}
   - component: {fileID: 1341199142}
   - component: {fileID: 1341199141}
+  - component: {fileID: 1341199143}
   m_Layer: 0
   m_Name: weapon_woodensword
   m_TagString: Weapon
@@ -13978,6 +13979,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.061712854, y: 0.13149849}
   m_EdgeRadius: 0
+--- !u!95 &1341199143
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341199138}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e136de402f05734fa16f9f4c59460af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1383094649
 GameObject:
   m_ObjectHideFlags: 0
