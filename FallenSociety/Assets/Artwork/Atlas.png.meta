@@ -202,13 +202,13 @@ TextureImporter:
     second: weapon_rustysword
   - first:
       213: -349028749020191069
-    second: weapon_sword0
+    second: enemy_1
   - first:
       213: 2676561953846364279
     second: weapon_battlehammer
   - first:
       213: 5150473195151649443
-    second: weapon_sword0
+    second: enemy_1
   - first:
       213: -1656842854750192170
     second: weapon_sword1
@@ -2696,6 +2696,27 @@ TextureImporter:
       bones: []
       spriteID: f4d0c6911a6340430800000000000000
       internalID: 3748180855423241551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6a046b330082bf0800000000000000
+      internalID: -349028749020191069
       vertices: []
       indices: 
       edges: []
