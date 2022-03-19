@@ -16,10 +16,14 @@ public class Weapon : Collidable
     private float cooldown = 0.5f;
     private float lastSwing;
 
+    //Detection
+    private BoxCollider2D wepColl;
+
     protected override void Start()
     {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        wepColl = GetComponent<BoxCollider2D>();
     }
 
     protected override void Update()
@@ -38,8 +42,14 @@ public class Weapon : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        
-
+        if (coll.tag == "Fighter" && coll.name != "Player")
+        {
+            Debug.Log(coll.name);
+        }
+        else
+        {
+            return;
+        }
     }
 
     private void Swing() 
