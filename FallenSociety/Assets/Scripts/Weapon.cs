@@ -49,7 +49,7 @@ public class Weapon : Collidable
                 return;
             }
 
-            //Create new damage object. Then send to Fighter that was just hit.
+            //Create new damage struct object. Then send to Fighter that was just hit.
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
