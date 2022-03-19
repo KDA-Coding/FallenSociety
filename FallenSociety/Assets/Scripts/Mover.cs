@@ -20,16 +20,10 @@ public abstract class Mover : Fighter
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void FixedUpdate()
-    {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-    }
-
     protected virtual void UpdateMotor(Vector3 input) 
     {
         //Reset moveDelta
-        moveDelta = input;
+        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         //Switch Sprite facing based on move direction (Right or Left)
         if (moveDelta.x > 0)
