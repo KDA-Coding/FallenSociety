@@ -13580,6 +13580,7 @@ GameObject:
   - component: {fileID: 1196523015}
   - component: {fileID: 1196523014}
   - component: {fileID: 1196523017}
+  - component: {fileID: 1196523018}
   m_Layer: 7
   m_Name: SmallEnemy
   m_TagString: Fighter
@@ -13711,6 +13712,34 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+--- !u!114 &1196523018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196523013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d975970c443ac40ae214ea04896239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  damage: 1
+  pushForce: 3
 --- !u!1 &1246794313
 GameObject:
   m_ObjectHideFlags: 0
@@ -13921,7 +13950,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   damagePoint: 1
-  pushForce: 2
+  pushForce: 4
   weaponLevel: 0
 --- !u!61 &1341199142
 BoxCollider2D:
@@ -14146,9 +14175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3050be80d637db41b1291cae9d8dbe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 0
-  maxHitPoints: 0
-  pushRecoverySpeed: 0
+  hitpoint: 10
+  maxHitPoints: 10
+  pushRecoverySpeed: 0.2
 --- !u!61 &1621611738
 BoxCollider2D:
   m_ObjectHideFlags: 0
