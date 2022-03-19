@@ -42,13 +42,23 @@ public class Weapon : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.tag == "Fighter" && coll.name != "Player")
+        if (coll.tag == "Fighter")
         {
-            Debug.Log(coll.name);
-        }
-        else
-        {
-            return;
+            if (coll.name == "Player")
+            {
+                return;
+            }
+
+            //Create new damage object. Then send to Fighter that was just hit.
+            Damage dmg = new Damage
+            {
+                damageAmount = damagePoint,
+                origin = transform.position,
+                pushForce = pushForce
+            };
+
+            coll.SendMessage("ReceiveDamage", dmg);
+
         }
     }
 
