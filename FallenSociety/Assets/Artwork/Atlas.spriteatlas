@@ -70,6 +70,8 @@ SpriteAtlas:
   - {fileID: 2676561953846364279, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -6034346704468134786, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -3001479746529436847, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: 1468159902497108060, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: 5735746141890243810, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -3900280418541178450, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -4714875811604055282, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: 3059076114534577413, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
@@ -183,6 +185,8 @@ SpriteAtlas:
   - weapon_battlehammer
   - crate_3
   - crate_2
+  - menu_1
+  - menu_0
   - fountainhead_0
   - fountainhead_1
   - fountainhead_2

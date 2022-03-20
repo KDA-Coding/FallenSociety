@@ -233,6 +233,12 @@ TextureImporter:
   - first:
       213: 3748180855423241551
     second: weapon_goldendagger
+  - first:
+      213: 5735746141890243810
+    second: menu_0
+  - first:
+      213: 1468159902497108060
+    second: menu_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2709,7 +2715,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2717,6 +2723,48 @@ TextureImporter:
       bones: []
       spriteID: 3a6a046b330082bf0800000000000000
       internalID: -349028749020191069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 161
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec6f2d0ab6799f40800000000000000
+      internalID: 5735746141890243810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 161
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50ffc517a3ff5410800000000000000
+      internalID: 1468159902497108060
       vertices: []
       indices: 
       edges: []
