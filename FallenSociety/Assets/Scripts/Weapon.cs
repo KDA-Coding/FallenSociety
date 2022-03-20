@@ -13,6 +13,7 @@ public class Weapon : Collidable
     private SpriteRenderer spriteRenderer;
 
     //Swing
+    private Animator anim;
     private float cooldown = 0.5f;
     private float lastSwing;
 
@@ -24,13 +25,14 @@ public class Weapon : Collidable
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
         wepColl = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     protected override void Update()
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Mouse0)) 
         {
             if(Time.time - lastSwing > cooldown)
             {
@@ -64,7 +66,7 @@ public class Weapon : Collidable
 
     private void Swing() 
     {
-        Debug.Log("Swing");
+        anim.SetTrigger("Swing");
     }
 
 }
