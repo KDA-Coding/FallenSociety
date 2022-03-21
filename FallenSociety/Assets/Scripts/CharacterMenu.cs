@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterMenu : MonoBehaviour
 {
     // Text fields
-    public Text levelText, hitpointText, coinsText, upgradeCostText, xpText;
+    public Text levelText, hitpointText, coinsText, upgradeCostText, expText;
 
     // Logic
     private int currentCharacterSelection = 0;
@@ -43,8 +43,26 @@ public class CharacterMenu : MonoBehaviour
     }
 
     // Weapon Upgrade
-    public void OnClickUpgrade() 
+    public void OnUpgradeClick() 
     {
+        // 
+    }
+
+    //Update Character Info
+    public void UpdateMenu() 
+    {
+        //Weapon
+        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
+        upgradeCostText.text = "NOT IMPLEMENTED";
+
+        //Meta
+        hitpointText.text = GameManager.instance.player.hitpoint.ToString();
+        coinsText.text = GameManager.instance.coins.ToString();
+        levelText.text = "NOT IMPLEMENTED";
+
+        // Exp Bar
+        expText.text = "NOT IMPLEMENTED";
+        expBar.localScale = new Vector3(0.5f, 0, 0);
 
     }
 }

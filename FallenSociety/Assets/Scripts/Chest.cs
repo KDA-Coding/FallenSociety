@@ -15,9 +15,9 @@ public class Chest : Collectable
             isCollected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
 
-            //Statement to show currency text over Chests.
+            //Statements to show currency text over Chests and add currency to inventory menu.
+            GameManager.instance.coins += coinAmount;
             GameManager.instance.ShowText("+"+coinAmount+" Coins", 24, Color.yellow, transform.position, Vector3.up * 40, 2.5f);
-            //GameManager.instance.ShowText("+" + coinAmount + " coins", 22, Color.yellow, transform.position, Vector3.up * 40, 2.5f);
         }
     }
 

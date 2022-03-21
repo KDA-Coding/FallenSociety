@@ -4051,6 +4051,18 @@ MonoBehaviour:
           m_StringArgument: Show
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 906265226}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: UpdateMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &210731901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14100,7 +14112,7 @@ GameObject:
   - component: {fileID: 590823054}
   - component: {fileID: 590823053}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UpgradeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14811,6 +14823,7 @@ GameObject:
   - component: {fileID: 906265220}
   - component: {fileID: 906265224}
   - component: {fileID: 906265225}
+  - component: {fileID: 906265226}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -14931,6 +14944,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &906265226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906265219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41ab3d7bf5550468ee0168a902a649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 740188235}
+  hitpointText: {fileID: 2125532548}
+  coinsText: {fileID: 717887338}
+  upgradeCostText: {fileID: 590823053}
+  expText: {fileID: 1238978033}
+  characterSelectionSprite: {fileID: 1950951853}
+  weaponSprite: {fileID: 304850878}
+  expBar: {fileID: 613865760}
 --- !u!1 &915959087
 GameObject:
   m_ObjectHideFlags: 0
@@ -15187,7 +15220,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprites: []
-  weaponSprites: []
+  weaponSprites:
+  - {fileID: -3219154307197777229, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: -6674061656437328523, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: -1656842854750192170, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: 8121168628305159327, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: 2797862723735380732, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: -7770406906683238013, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   weaponPrices: 
   xpTable: 
   player: {fileID: 1621611737}
@@ -15424,7 +15463,7 @@ GameObject:
   - component: {fileID: 1238978034}
   - component: {fileID: 1238978033}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ProgressText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
