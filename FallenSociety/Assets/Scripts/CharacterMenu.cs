@@ -45,7 +45,10 @@ public class CharacterMenu : MonoBehaviour
     // Weapon Upgrade
     public void OnUpgradeClick() 
     {
-        // 
+        if (GameManager.instance.TryUpgradeWeapon())
+        {
+            UpdateMenu();
+        }
     }
 
     //Update Character Info

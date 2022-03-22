@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 21741730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906265226}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnUpgradeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &21741730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15220,16 +15232,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprites: []
-  weaponSprites:
-  - {fileID: -3219154307197777229, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
-  - {fileID: -6674061656437328523, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
-  - {fileID: -1656842854750192170, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
-  - {fileID: 8121168628305159327, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
-  - {fileID: 2797862723735380732, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
-  - {fileID: -7770406906683238013, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  weaponSprites: []
   weaponPrices: 
   xpTable: 
   player: {fileID: 1621611737}
+  weapon: {fileID: 1341199141}
   floatingTextManager: {fileID: 580263434}
   coins: 0
   experience: 0
@@ -15819,8 +15826,15 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 1
-  pushForce: 4
+  damagePoint: 0100000002000000040000000500000006000000080000000a000000
+  pushForce:
+  - 2
+  - 2.2
+  - 2.5
+  - 3
+  - 3.2
+  - 3.6
+  - 4
   weaponLevel: 0
 --- !u!61 &1341199142
 BoxCollider2D:

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Weapon : Collidable
 {
     // Damage struct
-    public int damagePoint = 1;
-    public float pushForce = 2.0f;
+    /*Array of damage values*/ public int[] damagePoint = { 1, 2, 4, 5, 6, 8, 10 };
+    /*Array of knockback force values*/ public float[] pushForce = { 2.0f, 2.2f, 2.5f, 3f, 3.2f, 3.6f, 4f };
 
     // Upgrade
     public int weaponLevel = 0;
@@ -17,7 +17,7 @@ public class Weapon : Collidable
     private float cooldown = 0.5f;
     private float lastSwing;
 
-    //Detection
+    //Hit Detection
     private BoxCollider2D wepColl;
 
     protected override void Start()
@@ -54,9 +54,9 @@ public class Weapon : Collidable
             //Create new damage struct object. Then send to Fighter that was just hit.
             Damage dmg = new Damage
             {
-                damageAmount = damagePoint,
+                damageAmount = damagePoint[weaponLevel],
                 origin = transform.position,
-                pushForce = pushForce
+                pushForce = pushForce[weaponLevel]
             };
 
             coll.SendMessage("ReceiveDamage", dmg);
@@ -69,4 +69,11 @@ public class Weapon : Collidable
         anim.SetTrigger("Swing");
     }
 
+    public void UpgradeWeapon() 
+    {
+        weaponLevel++;
+        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
+
+        //Change weapon stats
+    }
 }

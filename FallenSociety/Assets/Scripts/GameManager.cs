@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     //References
     public Player player;
-    //public Weapon weapon;
+    public Weapon weapon;
     public FloatingTextManager floatingTextManager;
 
     // Game/Player Logic and Values
@@ -38,6 +38,25 @@ public class GameManager : MonoBehaviour
     public void ShowText(string message, int fontSize, Color color, Vector3 position, Vector3 motion, float duration) 
     {
         floatingTextManager.Show(message, fontSize, color, position, motion, duration);
+    }
+
+    // Upgrade Weapon
+    public bool TryUpgradeWeapon() 
+    {
+        // Is weapon max level?
+        if (weaponPrices.Count <= weapon.weaponLevel) 
+        {
+            return false;
+        }
+
+        if( coins >= weaponPrices[weapon.weaponLevel]) 
+        {
+            coins -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
     }
 
 
