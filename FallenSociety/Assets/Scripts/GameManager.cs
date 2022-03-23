@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         s += "0" + "|";
         s += coins.ToString() + "|";
         s += experience.ToString() + "|";
-        s += "0";
+        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("Save State");
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         /*Skin*/
         /*Coins*/ coins = int.Parse(data[1]);
         /*Experience*/ experience = int.Parse(data[2]);
-        /*Weapon Level*/
+        /*Weapon Level*/ weapon.SetWeaponLevel(int.Parse(data[3]));
 
         Debug.Log("Load State");
     }

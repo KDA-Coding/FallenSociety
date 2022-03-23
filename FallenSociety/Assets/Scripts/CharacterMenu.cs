@@ -40,6 +40,7 @@ public class CharacterMenu : MonoBehaviour
     private void OnSelectionChanged() 
     {
         characterSelectionSprite.sprite = GameManager.instance.playerSprites[currentCharacterSelection];
+        GameManager.instance.player.SwapSprite(currentCharacterSelection);
     }
 
     // Weapon Upgrade
@@ -55,8 +56,11 @@ public class CharacterMenu : MonoBehaviour
     public void UpdateMenu() 
     {
         //Weapon
-        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
-        upgradeCostText.text = "NOT IMPLEMENTED";
+        weaponSprite.sprite = GameManager.instance.weaponSprites[GameManager.instance.weapon.weaponLevel];
+        if (GameManager.instance.weapon.weaponLevel == GameManager.instance.weaponPrices.Count)
+            upgradeCostText.text = "Max";
+        else
+            upgradeCostText.text = GameManager.instance.weaponPrices[GameManager.instance.weapon.weaponLevel].ToString();
 
         //Meta
         hitpointText.text = GameManager.instance.player.hitpoint.ToString();
