@@ -55,6 +55,9 @@ public class CharacterMenu : MonoBehaviour
     //Update Character Info
     public void UpdateMenu() 
     {
+        //Current Level Reference for Exp Bar
+        int currentLevel = GameManager.instance.GetCurrentLevel();
+
         //Weapon
         weaponSprite.sprite = GameManager.instance.weaponSprites[GameManager.instance.weapon.weaponLevel];
         if (GameManager.instance.weapon.weaponLevel == GameManager.instance.weaponPrices.Count)
@@ -65,12 +68,27 @@ public class CharacterMenu : MonoBehaviour
         //Meta
         hitpointText.text = GameManager.instance.player.hitpoint.ToString();
         coinsText.text = GameManager.instance.coins.ToString();
-        levelText.text = "NOT IMPLEMENTED";
+        levelText.text = currentLevel.ToString();
 
         // Exp Bar
-        expText.text = "NOT IMPLEMENTED";
-        expBar.localScale = new Vector3(0.5f, 0, 0);
+        if(currentLevel == GameManager.instance.xpTable.Count) 
+        {
+            expText.text = GameManager.instance.experience.ToString() + " Total Exp"; //Display total EXP if max level
+            expBar.localScale = Vector3.one;
+        }
+        else 
+        {
+            int prevLevelExp = GameManager.instance.GetXpToLevel(currentLevel - 1);
+            int currentLevelExp = GameManager.instance.GetXpToLevel(currentLevel);
 
+            int difference = currentLevelExp - prevLevelExp;
+            int currXpIntoLevel = GameManager.instance.experience - prevLevelExp;
+
+            float expCompletionRatio = (float)currXpIntoLevel / (float)difference;
+            expBar.localScale = new Vector3(expCompletionRatio, 1, 1);
+
+            expText.text = currXpIntoLevel.ToString() + " / " + difference;
+        }
     }
 }
 

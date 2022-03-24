@@ -59,6 +59,57 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    //Experience system
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+
+        while (experience >= add)
+        {
+            if (r == xpTable.Count) // Max Level Check
+                return r;
+
+            add += xpTable[r];
+            r++;
+        }
+
+        return r;
+
+    }
+
+    public int GetXpToLevel(int level) 
+    {
+        int r = 0;
+        int exp = 0;
+
+        while (r < level) 
+        {
+            exp += xpTable[r];
+            r++;
+        }
+
+        return exp;
+    }
+
+    public void GrantExp(int exp) 
+    {
+        int currLevel = GetCurrentLevel();
+        experience += exp;
+        if(currLevel < GetCurrentLevel()) 
+        {
+            OnLevelUp();
+        }
+    }
+
+    //Make something happen when a Player or Enemy Levels up.
+    public void OnLevelUp() 
+    {
+        //The thing that happens when you/ an enemy levels up. Can be changed here.
+
+        ShowText("Level Up!", 24, Color.cyan, transform.position + new Vector3(0, 0.1f, 0), Vector3.up * 15, 2.5f);
+        player.OnLevelUp();
+    }
 
     //Save and Load states
 
@@ -94,9 +145,12 @@ public class GameManager : MonoBehaviour
         /*Skin*/
         /*Coins*/ coins = int.Parse(data[1]);
         /*Experience*/ experience = int.Parse(data[2]);
+        
+        /*Player Level. */
+        if(GetCurrentLevel() != 1)
+        player.SetLevel(GetCurrentLevel());
         /*Weapon Level*/ weapon.SetWeaponLevel(int.Parse(data[3]));
 
         Debug.Log("Load State");
     }
-
 }

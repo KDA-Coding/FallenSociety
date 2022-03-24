@@ -16300,9 +16300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3050be80d637db41b1291cae9d8dbe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 10
-  maxHitPoints: 10
-  pushRecoverySpeed: 0.2
+  hitpoint: 5
+  maxHitPoints: 5
+  pushRecoverySpeed: 0.3
 --- !u!61 &1621611738
 BoxCollider2D:
   m_ObjectHideFlags: 0
