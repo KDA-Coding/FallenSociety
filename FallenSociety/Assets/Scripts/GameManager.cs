@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadState(Scene s, LoadSceneMode mode) 
     {
+        Debug.Log("Load State");
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -151,6 +152,6 @@ public class GameManager : MonoBehaviour
         player.SetLevel(GetCurrentLevel());
         /*Weapon Level*/ weapon.SetWeaponLevel(int.Parse(data[3]));
 
-        Debug.Log("Load State");
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }
