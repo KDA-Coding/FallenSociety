@@ -64,11 +64,14 @@ public class GameManager : MonoBehaviour
     //Experience system
     public int GetCurrentLevel()
     {
+        Debug.Log("GetCurrentLevel() Called");
         int r = 0;
         int add = 0;
 
         while (experience >= add)
         {
+            Debug.Log("Adding EXP");
+
             if (r == xpTable.Count) // Max Level Check
                 return r;
 
