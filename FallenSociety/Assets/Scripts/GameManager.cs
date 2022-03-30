@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     //Resources
@@ -125,7 +126,15 @@ public class GameManager : MonoBehaviour
 
         ShowText("Level Up!", 24, Color.cyan, transform.position + new Vector3(0, 0.1f, 0), Vector3.up * 15, 2.5f);
         player.OnLevelUp();
+        OnHipointChange();
     }
+
+    // On Scene Loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode) 
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
 
     //Save and Load states
 
@@ -169,7 +178,5 @@ public class GameManager : MonoBehaviour
         if(GetCurrentLevel() != 1)
         player.SetLevel(GetCurrentLevel());
         /*Weapon Level*/ weapon.SetWeaponLevel(int.Parse(data[3]));
-
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }
