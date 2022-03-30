@@ -13,12 +13,13 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             Destroy(floatingTextManager.gameObject);
             Destroy(player.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
     }
 
     //Resources
@@ -31,6 +32,9 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitpointBar;
+    public GameObject hud;
+    public GameObject menu;
 
     // Game/Player Logic and Values
     public int coins;
@@ -59,6 +63,13 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    // Health Bar
+    public void OnHipointChange() 
+    {
+        float ratio = (float)player.hitpoint / (float)player.maxHitPoints;
+        hitpointBar.localScale = new Vector3(1, ratio, 1);
     }
 
     //Experience system
@@ -140,6 +151,9 @@ public class GameManager : MonoBehaviour
 
     public void LoadState(Scene s, LoadSceneMode mode) 
     {
+
+        SceneManager.sceneLoaded -= LoadState;
+
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -157,6 +171,5 @@ public class GameManager : MonoBehaviour
         /*Weapon Level*/ weapon.SetWeaponLevel(int.Parse(data[3]));
 
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
-        Debug.Log("Load State");
     }
 }
