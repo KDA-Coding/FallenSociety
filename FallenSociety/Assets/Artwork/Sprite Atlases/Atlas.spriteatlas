@@ -122,6 +122,7 @@ SpriteAtlas:
   - {fileID: -2512490208455336206, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -1463246288967468283, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -6674061656437328523, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: 1228791549236833675, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -3149050133103254212, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: 4204374477710404856, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: 4971049064686688367, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
@@ -147,6 +148,7 @@ SpriteAtlas:
   - {fileID: 4111196556954763487, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: 4596313960938759734, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -349028749020191069, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
+  - {fileID: -8831119618608956436, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -2521213972240115858, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -6183442603270459220, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
   - {fileID: -4869357254534750094, guid: c1a494dc130997c4ca830580ac9e8d42, type: 3}
@@ -237,6 +239,7 @@ SpriteAtlas:
   - pillar_4
   - pillar_5
   - weapon_rustysword
+  - boss_0
   - centerfloor_7
   - centerfloor_6
   - centerfloor_5
@@ -262,6 +265,7 @@ SpriteAtlas:
   - stair_lowerflight_0
   - skillfountain_0
   - enemy_1
+  - enemy_2
   - holewall_0
   - holewall_1
   - player_1
