@@ -7,8 +7,17 @@ public class NPCSpeech : Collidable
 
     public string message;
 
+    private float cooldown = 4.0f;
+    private float lastMessage = -4.0f;
+
     protected override void OnCollide(Collider2D coll)
     {
-        GameManager.instance.ShowText(message, 25, Color.white, transform.position, Vector3.zero, 5.0f);
+        if(Time.time - lastMessage > cooldown) 
+        {
+            lastMessage = Time.time;
+            GameManager.instance.ShowText(message, 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+        }
+
+        
     }
 }
