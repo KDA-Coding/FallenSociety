@@ -15651,6 +15651,7 @@ MonoBehaviour:
   weapon: {fileID: 1341199141}
   floatingTextManager: {fileID: 1383094654}
   hitpointBar: {fileID: 2015216509}
+  deathMenuAnimator: {fileID: 335888415}
   hud: {fileID: 861644180}
   menu: {fileID: 906265219}
   coins: 0
