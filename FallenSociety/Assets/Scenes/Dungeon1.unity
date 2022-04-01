@@ -2728,7 +2728,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   sceneNames:
-  - Dungeon1
   - Main
 --- !u!61 &379453804
 BoxCollider2D:
