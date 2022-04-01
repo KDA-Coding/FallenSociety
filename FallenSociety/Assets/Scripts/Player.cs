@@ -71,4 +71,12 @@ public class Player : Mover
         GameManager.instance.OnHipointChange();
     }
 
+    public void Respawn() 
+    {
+        Heal(maxHitPoints);
+        isAlive = true;
+        lastImmune = Time.time;
+        pushDirection = Vector3.zero;
+    }
+
 }
