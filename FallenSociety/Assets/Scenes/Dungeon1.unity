@@ -14690,7 +14690,7 @@ GameObject:
   - component: {fileID: 1028190924}
   m_Layer: 7
   m_Name: enemy_2 (2)
-  m_TagString: Fighter
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15026,7 +15026,7 @@ GameObject:
   - component: {fileID: 1146320955}
   m_Layer: 7
   m_Name: enemy_2 (1)
-  m_TagString: Fighter
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35123,7 +35123,7 @@ GameObject:
   - component: {fileID: 1874851205}
   m_Layer: 7
   m_Name: enemy_2
-  m_TagString: Fighter
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
