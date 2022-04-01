@@ -15130,7 +15130,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   sceneNames:
   - Dungeon1
-  - Main
 --- !u!1 &906265219
 GameObject:
   m_ObjectHideFlags: 0
