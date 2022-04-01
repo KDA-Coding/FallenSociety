@@ -76,13 +76,11 @@ public class GameManager : MonoBehaviour
     //Experience system
     public int GetCurrentLevel()
     {
-        Debug.Log("GetCurrentLevel() Called");
         int r = 0;
         int add = 0;
 
         while (experience >= add)
         {
-            Debug.Log("Adding EXP");
 
             if (r == xpTable.Count) // Max Level Check
                 return r;
@@ -124,7 +122,7 @@ public class GameManager : MonoBehaviour
     {
         //The thing that happens when you/ an enemy levels up. Can be changed here.
 
-        ShowText("Level Up!", 24, Color.cyan, transform.position + new Vector3(0, 0.1f, 0), Vector3.up * 15, 2.5f);
+        ShowText("Level Up!", 24, Color.cyan, player.transform.position + new Vector3(0, 0.1f, 0), Vector3.up * 15, 2.5f);
         player.OnLevelUp();
         OnHipointChange();
     }

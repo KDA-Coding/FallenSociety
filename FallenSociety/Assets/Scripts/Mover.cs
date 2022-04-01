@@ -9,8 +9,8 @@ public abstract class Mover : Fighter
 
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+    public float ySpeed = 0.75f;
+    public float xSpeed = 1.0f;
 
 
     private Vector2 colScale = new Vector2(0.7f, 0.7f);
@@ -58,12 +58,5 @@ public abstract class Mover : Fighter
             //Move the player sprite along x axis
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-
-
-        //Debugs for Movement floats
-        /*
-        Debug.Log(moveX);
-        Debug.Log(moveY); */
     }
-
 }

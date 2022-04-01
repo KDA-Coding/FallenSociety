@@ -33,7 +33,6 @@ public class Player : Mover
 
     public void OnLevelUp()
     {
-        Debug.Log("OnLevelUp() Called");
         maxHitPoints++;
         hitpoint = maxHitPoints;
     }
@@ -56,7 +55,7 @@ public class Player : Mover
         if (hitpoint > maxHitPoints)
             hitpoint = maxHitPoints;
 
-        GameManager.instance.ShowText("+" + healAmount.ToString() + " HP", 22, new Color(0.9f, 0.2f, 0.1f), transform.position, Vector3.up * 30, 1.5f);
+        GameManager.instance.ShowText("+" + healAmount.ToString() + " HP", 22, Color.red, transform.position, Vector3.up * 30, 1.5f);
         GameManager.instance.OnHipointChange();
     }
 }
