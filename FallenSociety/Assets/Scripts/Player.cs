@@ -34,8 +34,11 @@ public class Player : Mover
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if(isAlive)
-            UpdateMotor(new Vector3(moveX,moveY,0));
+        if (isAlive) 
+        {
+            UpdateMotor(new Vector3(moveX, moveY, 0));
+        }
+            
     }
 
     public void SwapSprite(int skinID) 
